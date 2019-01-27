@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {{ .Hugo.Generator }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+  {{ if .IsHome }}
+  {{ $homepage := "" }}{{ range first 1 .Site.Menus.nav }}{{ $homepage = .Name }}{{ end }}
+  <title>{{ $homepage }} $ {{ .Site.Title }}</title>
+  {{ else }}
+  <title>{{ .Title }} $ {{ .Site.Title }}</title>
+  {{ end }}
+
+  <h2>$ {{ .Site.Title }}</h2>
+
+  <style>
+    body {
+      margin: 40px auto;
+      max-width: 800px;
+      line-height: 1.6;
+      font-size: 18px;
+      color: #444;
+      padding: 0 10px
+    }
+
+    h1,
+    h2 {
+      font-family: 'Source Sans Pro', sans-serif;
+    },
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.2
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    {{ range .Site.Menus.nav }}
+    <a href="{{ .URL }}"><strong>{{ .Name }}</strong></a>
+    {{ end }}
+  </nav>
+
+  <hr>
+
+  {{ block "main" . }}{{ end }}
+</body>
+
+</html>

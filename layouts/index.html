@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ $homepage := "" }}{{ range first 1 .Site.Menus.nav }}{{ $homepage = .Name }}{{ end }}
+<h1>{{ $homepage }}</h1>
+
+{{ range where .Pages.ByPublishDate.Reverse "Section" "posts" }}
+<p>
+    <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
+    <br>
+    <small>{{ .PublishDate.Format "2006-01-02 15:04" }}</small>
+</p>
+{{ end }}
+
+{{ end }}

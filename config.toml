@@ -1,4 +1,26 @@
-baseURL = "http://example.org/"
+baseURL = "https://doi-t.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "ananke"
+title = "cat tech_note.md | grep \"$relevant, I guess.\""
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[permalinks]
+  posts = "/:year/:month/:day/:title/"
+
+[params]
+  author = "Toshiya Doi"
+  description = "Random tech notes as an output and practice writing English."
+
+[menu]
+  [[menu.nav]]
+  name = ""
+  url = "/"
+  weight = 1
+  [[menu.nav]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+  [[menu.nav]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 3
