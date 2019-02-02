@@ -1,8 +1,16 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<div class="post-title">
+    <h1>{{ .Title }}</h1>
+</div>
+
+<div class="post-date">
+<small>
+Published date: {{ .PublishDate.Format "2006-01-02 15:04" }}{{ if gt .Lastmod .PublishDate }}, updated {{ .Lastmod.Format "2006-01-02  15:04" }}{{ end }}<br>
+Last modified: {{ .PublishDate.Format "2006-01-02 15:04" }}{{ if gt .Lastmod .PublishDate }}, updated {{ .Lastmod.Format "2006-01-02  15:04" }}{{ end }}
+</small>
+</div>
 
 {{ .Content }}
 
-<small>{{ .PublishDate.Format "2006-01-02 15:04" }}{{ if gt .Lastmod .PublishDate }}, updated {{ .Lastmod.Format "2006-01-02 15:04" }}{{ end }}</small>
 {{ end }}

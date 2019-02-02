@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="description" content="{{ .Site.Params.description }}">
-  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/chroma-styles.css">
+  <link href='https://fonts.google.com/specimen/Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.google.com/specimen/Roboto' rel='stylesheet' type='text/css'>
 
   {{ if .IsHome }}
   {{ $homepage := "" }}{{ range first 1 .Site.Menus.nav }}{{ $homepage = .Name }}{{ end }}
@@ -16,41 +18,97 @@
   <title>{{ .Title }} $ {{ .Site.Title }}</title>
   {{ end }}
 
-  <h2>$ {{ .Site.Title }}</h2>
-
   <style>
     body {
       margin: 40px auto;
-      max-width: 800px;
+      max-width: 700px;
       line-height: 1.6;
       font-size: 18px;
-      color: #444;
-      padding: 0 10px
+      color: #4C5557;
+      padding: 0 10px;
+      background-color: #f8f8f8;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    code {
+      font-family: 'Source Code Pro', sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    pre, .highlight pre {
+      overflow: auto;
+      padding: 16px;
     }
 
     h1,
-    h2 {
-      font-family: 'Source Sans Pro', sans-serif;
-    },
+    h2,
     h3,
     h4,
     h5,
     h6 {
       line-height: 1.2
     }
+
+    blockquote {
+      font-style: italic;
+      padding-left: 8px;
+      margin: auto;
+      border-left: 5px solid #eee;
+    }
+
+    ul, ol {
+      padding-left: 25px;
+    }
+
+    .title {
+      text-align: center;
+      font-family: 'Source Code Pro', sans-serif;
+    }
+
+    .post-date {
+      text-align: right;
+      color: gray;
+    }
+
+    .post {
+      padding: 16px;
+      background-color: #FDFDFD;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+      color: #4C5557;
+    }
+
+    .menu a:link, a:visited {
+      text-decoration: none;
+    }
+
+    .menu a:hover, a:active {
+      text-decoration: underline;
+    }
+
+
   </style>
 </head>
 
 <body>
+  <div class="title">
+    <a href="{{ .Site.BaseURL }}" style="text-decoration: none;">
+      <h2>$ {{ .Site.Title }}</h2>
+    </a>
+  </div>
+
   <nav>
-    {{ range .Site.Menus.nav }}
-    <a href="{{ .URL }}"><strong>{{ .Name }}</strong></a>
-    {{ end }}
+  <div class="menu">
+  <strong>$ {{ range .Site.Menus.nav }}<a href="{{ .URL }}">{{ .Name }}</a> > {{ end }} /dev/null</strong>
+  </div>
   </nav>
 
   <hr>
 
+  <div class="post">
   {{ block "main" . }}{{ end }}
+  </div>
 </body>
 
 </html>
