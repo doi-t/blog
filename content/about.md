@@ -7,7 +7,4 @@ draft: true
 layout: "about"
 ---
 
-- Toshiya Doi (doi-t)
-- [Github](https://github.com/doi-t)
-- [Twitter](https://twitter.com/DDDDoi)
-- [Japanese blog](http://doi-t.hatenablog.com)
+ Like: English, PlayBilliard, HHKB, Network, DistributedSystem, Monitoring, Automation.

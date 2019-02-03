@@ -9,6 +9,19 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+footer {
+  padding: 6px;
+  text-align: center;
+  color: darkgray;
+  font-size: smaller;
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+footer a {
+  color: darkgray !important;
+  text-decoration: none;
+}
+
 code {
   font-family: 'Source Code Pro', sans-serif;
   background-color: #f8f8f8;
@@ -67,7 +80,7 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: underline;
 }
 
-.container {
+.about-container {
   display: grid;
   grid-gap: 10px;
 }

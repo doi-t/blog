@@ -12,6 +12,9 @@ pygmentsUseClasses = true
 [params]
   author = "Toshiya Doi"
   description = "Random tech notes as an output and practice writing English."
+  githubLink = "https://github.com/doi-t"
+  twitterLink = "https://twitter.com/DDDDoi"
+  japaneseBlogLink = "http://doi-t.hatenablog.com"
 
 [menu]
   [[menu.nav]]
