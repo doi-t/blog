@@ -3,7 +3,8 @@
 <h1>{{ .Title }}</h1>
 
 <div class="post-date">
-{{ .PublishDate.Format "2006-01-06 15:06" }}
+Published: {{ .PublishDate.Format "2006-01-02 15:04" }}<br>
+Last modified: {{ .Lastmod.Format "2006-01-02 15:04" }}
 </div>
 
 {{ .Content }}
