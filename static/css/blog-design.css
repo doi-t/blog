@@ -97,20 +97,26 @@ a:link, a:visited, a:hover, a:active {
 
 .about-container {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 16px;
 }
 
 .about-title {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 4;
   grid-row: 1;
 }
 
 .self-icon {
-  grid-column: 1 / span 1;
+  grid-column: 1;
   grid-row: 2;
 }
 
+.self-icon img {
+  border-radius: 15px;
+  min-width: 100px;
+  max-height: auto; 
+}
+
 .about {
-  grid-column: 2 / span 5;
+  grid-column: 2 / span 3;
   grid-row: 2;
 }
