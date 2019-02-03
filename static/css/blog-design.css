@@ -1,8 +1,7 @@
 body {
-  margin: 40px auto;
+  margin: 0 auto;
   max-width: 700px;
-  line-height: 1.6;
-  font-size: 18px;
+  line-height: 1.4;
   color: #4C5557;
   padding: 0 10px;
   background-color: #f8f8f8;
@@ -63,7 +62,7 @@ th, td {
 }
 
 .title {
-  text-align: center;
+  text-align: left;
   font-family: 'Source Code Pro', sans-serif;
 }
 
@@ -74,7 +73,7 @@ th, td {
 }
 
 .post {
-  padding: 16px;
+  padding: 8px;
   background-color: #FDFDFD;
 }
 
