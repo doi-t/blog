@@ -1,4 +1,4 @@
-baseURL = "https://doi-t.github.io/"
+baseURL = "https://doi-t.net/"
 languageCode = "en-us"
 title = "cat tech_notes | grep \"$relevant, I guess.\""
 enableRobotsTXT = true

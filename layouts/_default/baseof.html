@@ -30,7 +30,19 @@
 
   <nav>
   <div class="menu">
-  <strong>$ {{ range .Site.Menus.nav }}<a href="{{ .URL }}">{{ .Name }}</a> > {{ end }} /dev/null</strong>
+  <strong>
+    $
+    {{ $list := (.Site.Menus.nav) }}
+    {{ $len := (len $list) }}
+    {{ range $index, $element := $list }}
+        {{ if eq (add $index 1) $len }}
+            <a href="{{ .URL }}">{{ .Name }}</a> >
+        {{ else }}
+            <a href="{{ .URL }}">{{ .Name }}</a> |
+        {{ end }}
+    {{ end }}
+    /dev/null
+  </strong>
   </div>
   </nav>
 
@@ -43,7 +55,7 @@
 
 <footer>
   <div class="footer-link">
-      $ &copy; <a href="{{ .Site.BaseURL }}/about">Toshiya Doi</a> > <a href="{{ .Site.Params.githubLink }}">Github</a> > <a href="{{ .Site.Params.twitterLink }}">Twitter</a>
+      $ &copy; <a href="{{ .Site.BaseURL }}/about">toshiya doi</a> | <a href="{{ .Site.Params.githubLink }}">github</a> > <a href="{{ .Site.Params.twitterLink }}">twitter</a>
   </div>
 </footer>
 
