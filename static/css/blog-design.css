@@ -52,6 +52,16 @@ ul, ol {
   padding-left: 25px;
 }
 
+table { 
+  width: 100%;
+  border: 1px solid #4C5557;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
 .title {
   text-align: center;
   font-family: 'Source Code Pro', sans-serif;
@@ -66,6 +76,11 @@ ul, ol {
 .post {
   padding: 16px;
   background-color: #FDFDFD;
+}
+
+.post img {
+    max-width: 100%;
+    max-height: auto; 
 }
 
 a:link, a:visited, a:hover, a:active {
