@@ -1,6 +1,6 @@
 body {
-  margin: 0 auto;
-  max-width: 700px;
+  margin: 20px auto;
+  max-width: 800px;
   line-height: 1.4;
   color: #4C5557;
   padding: 0 10px;
@@ -61,9 +61,11 @@ th, td {
   padding: 8px;
 }
 
-.title {
+.blog-title {
+  font-weight: bold;
   text-align: left;
   font-family: 'Source Code Pro', sans-serif;
+  font-size: 4vmin;
 }
 
 .post-date {
@@ -84,6 +86,10 @@ th, td {
 
 a:link, a:visited, a:hover, a:active {
   color: #4C5557;
+}
+
+.menu  {
+  font-size: 3vmin;
 }
 
 .menu a:link, a:visited {
