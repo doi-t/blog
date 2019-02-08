@@ -1,6 +1,6 @@
 body {
-  margin: 20px auto;
-  max-width: 800px;
+  margin: 0px auto;
+  max-width: 700px;
   line-height: 1.4;
   color: #4C5557;
   padding: 0 10px;
@@ -61,11 +61,28 @@ th, td {
   padding: 8px;
 }
 
-.blog-title {
+div.blog-title {
   font-weight: bold;
   text-align: left;
   font-family: 'Source Code Pro', sans-serif;
-  font-size: 4vmin;
+}
+
+@media screen and (min-width: 601px) {
+  .blog-title {
+    font-size: 20px;
+  }
+  .menu {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .blog-title {
+    font-size: 16px;
+  }
+  .menu {
+    font-size: 16px;
+  }
 }
 
 .post-date {
@@ -77,19 +94,16 @@ th, td {
 .post {
   padding: 8px;
   background-color: #FDFDFD;
+  margin: auto;
 }
 
 .post img {
-    max-width: 100%;
-    max-height: auto; 
+  max-width: 100%;
+  max-height: auto; 
 }
 
 a:link, a:visited, a:hover, a:active {
   color: #4C5557;
-}
-
-.menu  {
-  font-size: 3vmin;
 }
 
 .menu a:link, a:visited {
