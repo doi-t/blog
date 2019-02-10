@@ -5,6 +5,7 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 pygmentsCodefences = true
 pygmentsUseClasses = true
+googleAnalytics ="UA-48136686-2"
 
 [permalinks]
   posts = "/:year/:month/:day/:title/"

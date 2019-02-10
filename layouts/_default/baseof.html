@@ -12,6 +12,7 @@
   <link href="/css/chroma-styles.css" rel="stylesheet" type='text/css'>
   <link href='https://fonts.google.com/specimen/Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href='https://fonts.google.com/specimen/Roboto' rel='stylesheet' type='text/css'>
+  {{ template "_internal/google_analytics_async.html" . }}
 
   {{ if .IsHome }}
   {{ $homepage := "" }}{{ range first 1 .Site.Menus.nav }}{{ $homepage = .Name }}{{ end }}
