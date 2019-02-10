@@ -117,8 +117,7 @@ a:link, a:visited, a:hover, a:active {
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
-  line-height: 1.6;
+  width: 700px;
   background-color: #f8f8f8;
 }
 
