@@ -1,5 +1,5 @@
 body {
-  margin: 0px auto;
+  margin: 10px auto;
   max-width: 700px;
   line-height: 1.4;
   color: #4C5557;
@@ -71,7 +71,7 @@ div.blog-title {
   .blog-title {
     font-size: 20px;
   }
-  .menu {
+  #menu {
     font-size: 20px;
   }
 }
@@ -80,7 +80,7 @@ div.blog-title {
   .blog-title {
     font-size: 16px;
   }
-  .menu {
+  #menu {
     font-size: 16px;
   }
 }
@@ -106,12 +106,24 @@ a:link, a:visited, a:hover, a:active {
   color: #4C5557;
 }
 
-.menu a:link, a:visited {
+#menu a:link, a:visited {
   text-decoration: none;
 }
 
-.menu a:hover, a:active {
+#menu a:hover, a:active {
   text-decoration: underline;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+}
+
+.sticky + .post {
+  padding-top: 60px;
 }
 
 .about-container {
