@@ -20,9 +20,9 @@
 
   {{ if .IsHome }}
   {{ $homepage := "" }}{{ range first 1 .Site.Menus.nav }}{{ $homepage = .Name }}{{ end }}
-  <title>$ {{ .Site.Title }}</title>
+  <title>{{ .Site.Title }}</title>
   {{ else }}
-  <title>{{ .Title }} $ {{ .Site.Title }}</title>
+  <title>{{ .Title }} {{ .Site.Title }}</title>
   {{ end }}
 
 </head>
@@ -30,7 +30,7 @@
 <body>
   <div class="blog-title">
     <a href="{{ .Site.BaseURL }}" style="text-decoration: none;">
-      $ {{ .Site.Title }}
+      {{ .Site.Title }}
     </a>
   </div>
 
